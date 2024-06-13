@@ -27,7 +27,7 @@ const studentSchema = new mongoose.Schema({
     type: String,
     default: "Student",
   },
-  schoolFeePaid: {
+  hasPaidSchoolFee: {
     type: Boolean,
     required: false,
     default: false,
