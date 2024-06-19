@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { device } from '../../../styles/BreakPoints'
-interface ButtonType {
+export interface ButtonType {
   outline?: boolean
   bold?: boolean
   big?: boolean

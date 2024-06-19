@@ -6,6 +6,7 @@ import ToggleTheme from './components/ui/ToggleTheme'
 import QuizProvider from './context/QuizProvider'
 import { GlobalStyles } from './styles/Global'
 import { themes } from './styles/Theme'
+import { AuthProvider } from './context/AuthContext'
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -24,16 +25,18 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <QuizProvider>
-        <ToggleTheme
-          onChange={toggleTheme}
-          currentTheme={currentTheme}
-          checked={currentTheme === 'dark'}
-          id="toggleTheme"
-          value="theme"
-        />
-        <Main />
-      </QuizProvider>
+      <AuthProvider>
+        <QuizProvider>
+          <ToggleTheme
+            onChange={toggleTheme}
+            currentTheme={currentTheme}
+            checked={currentTheme === 'dark'}
+            id="toggleTheme"
+            value="theme"
+          />
+          <Main />
+        </QuizProvider>
+      </AuthProvider>
     </ThemeProvider>
   )
 }

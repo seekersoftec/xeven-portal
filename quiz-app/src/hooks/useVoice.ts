@@ -127,6 +127,16 @@ const useVoice = (
     }
 
     window.speechSynthesis.speak(utterance)
+
+    // let r = setInterval(() => {
+    //   console.log(speechSynthesis.speaking)
+    //   if (!speechSynthesis.speaking) {
+    //     clearInterval(r)
+    //   } else {
+    //     speechSynthesis.resume()
+    //   }
+    // }, 14000)
+
     resetTranscript()
   }
 

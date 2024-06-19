@@ -199,25 +199,28 @@ const QuestionScreen: FC = () => {
       // For example, you can use a switch statement to handle different voice commands
       switch (transcript) {
         case 'next':
-          console.log('next')
+          console.log('Voice command: next')
 
           onClickNext()
+          speak(formatQuestion(activeQuestion + 1, questions[activeQuestion + 1]))
           break
         // case 'previous':
         //   // Handle previous question voice command
         //   break
         case 'repeat':
+          console.log('Voice command: repeat')
           speak(formatQuestion(activeQuestion, currentQuestion))
           break
         default:
           // Handle unknown voice command
+          console.log('Unknown voice command')
           speak('Unknown voice command')
           break
       }
 
       speak(formatQuestion(activeQuestion, currentQuestion))
     }
-  }, [activeQuestion, currentQuestion, onClickNext, speak, transcript])
+  }, [activeQuestion, currentQuestion, onClickNext, questions, speak, transcript])
 
   // shortcut for voice
   useHotkeys('space', () => {

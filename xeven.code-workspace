@@ -1,6 +1,10 @@
 {
   "folders": [
     {
+      "name": "quiz-app",
+      "path": "./quiz-app"
+    },
+    {
       "name": "backend",
       "path": "./backend"
     },
