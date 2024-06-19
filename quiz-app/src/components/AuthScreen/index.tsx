@@ -135,7 +135,7 @@ const AuthScreen: React.FC = () => {
         {error && <DetailText color="red">{error}</DetailText>}
         <Form onSubmit={handleSubmit}>
           <Input
-            type="email"
+            type="text"
             value={studentID}
             onChange={(e) => setStudentID(e.target.value)}
             placeholder="StudentID (Email, etc)"
