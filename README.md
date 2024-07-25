@@ -201,3 +201,7 @@ Don't forget to leave a star for this project if you found the solution helpful.
 
 - https://github.com/Yogndrr/MERN-School-Management-System
 - https://github.com/seekersoftec/quiz-app
+
+# Requirements 
+
+(Requirements)[requirements.md]
